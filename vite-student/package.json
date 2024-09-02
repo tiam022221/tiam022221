@@ -12,14 +12,17 @@
     "axios": "^1.7.7",
     "lodash-es": "^4.17.21",
     "vue": "^3.4.37",
+    "pinia": "^2.1.7",
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
+    "@arco-design/web-vue": "^2.55.1",
     "@types/node": "^18.19.48",
     "@vitejs/plugin-vue": "^5.1.2",
     "@types/lodash-es": "^4.17.12",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "eslint": "^8.52.0",
+    "@vue/tsconfig": "^0.4.0",
     "prettier-eslint": "^16.1.2",
     "sass": "^1.77.8",
     "typescript": "^5.5.3",

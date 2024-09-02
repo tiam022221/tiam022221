@@ -1,4 +1,4 @@
-import { createWebHistory, RouteRecordRaw, createRouter } from "vue-router";
+import { createWebHistory, type RouteRecordRaw, createRouter } from "vue-router";
 
 const routes = [
   {
@@ -8,7 +8,7 @@ const routes = [
   {
     path: "/",
     name: "main-page",
-    component: () => import("../views/main/main.vue"),
+    component: () => import("@/views/main/main.vue"),
     meta: [
       {
         title: "首页",
@@ -18,7 +18,7 @@ const routes = [
       {
         path: "/index",
         name: "index-page",
-        component: () => import("../views/index/index.vue"),
+        component: () => import("@/views/index/index.vue"),
         meta: [{ title: "默认展示" }],
       },
     ],
@@ -26,7 +26,7 @@ const routes = [
   {
     path: "/user",
     name: "user-page",
-    component: () => import("../views/user/user.vue"),
+    component: () => import("@/views/user/user.vue"),
     meta: [{ title: "用户页" }],
   },
 ] as RouteRecordRaw[];

@@ -6,6 +6,9 @@
 export {}
 declare global {
   const $api: typeof import('@/apis')['default']
+  const $message: typeof import('@/hooks/message')['default']
+  const $messageBox: typeof import('@/hooks/message-box')['default']
+  const $notify: typeof import('@/hooks/notify')['default']
   const $store: typeof import('@/stores')['default']
   const EffectScope: typeof import('vue')['EffectScope']
   const computed: typeof import('vue')['computed']
