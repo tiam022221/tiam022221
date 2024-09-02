@@ -9,17 +9,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
+    "lodash-es": "^4.17.21",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
+    "@types/node": "^18.19.48",
     "@vitejs/plugin-vue": "^5.1.2",
+    "@types/lodash-es": "^4.17.12",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
     "eslint": "^8.52.0",
-    "express": "^4.19.2",
-    "prettier": "^3.1.0",
     "prettier-eslint": "^16.1.2",
     "sass": "^1.77.8",
     "typescript": "^5.5.3",
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-vue-components": "^0.25.2",
     "vite": "^5.4.1",
     "vue-tsc": "^2.0.29"
   }
