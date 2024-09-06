@@ -146,6 +146,7 @@ declare module 'vue' {
     VUploaderInsert: typeof import('./../components/v-uploader/v-uploader-insert.vue')['default']
     VUploaderItem: typeof import('./../components/v-uploader/v-uploader-item.vue')['default']
     VUploaderVideo: typeof import('./../components/v-uploader-video/v-uploader-video.vue')['default']
+    WButton: typeof import('./../components/w-button/w-button.vue')['default']
     WModal: typeof import('./../components/w-modal/w-modal.vue')['default']
   }
 }

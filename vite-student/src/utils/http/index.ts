@@ -152,7 +152,7 @@ const requestInterceptor: RequestInterceptor = async (
   const tokenValid = authStore.checkToken();
   if (!tokenValid) {
     authStore.clearToken();
-    window.location.href = "/login";
+    // window.location.href = "/login";
   }
   // 设置请求header
   const headers = getHeaders(opt);

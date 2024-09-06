@@ -68,7 +68,7 @@ export const responseInterceptorCatcher: ResponseInterceptorCatcher = async (
       }
       // const authStore = $store.auth()
       console.warn("401", options)
-      window.location.href = "/login"
+      // window.location.href = "/login"
       // await new Promise<void>(resolve => {
       //   authStore.showLoginPopover(resolve)
       // })
