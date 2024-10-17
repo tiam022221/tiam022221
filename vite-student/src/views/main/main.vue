@@ -1,9 +1,6 @@
 <template>
-  <button @click="sendApi">点我发生请求</button>
-  <!-- <router-view /> -->
-  <div class="h-full p-[100px]">
-    <w-button>我是按钮</w-button>
-  </div>
+  <!-- <button @click="sendApi">点我发生请求</button> -->
+  <router-view></router-view>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +10,17 @@ const sendApi = async () => {
     case undefined:
       $message.success("请求成功");
   }
+};
+const router = useRouter();
+const toIndex = () => {
+  router.push({
+    name: "index-page",
+  });
+};
+const toUser = () => {
+  router.push({
+    name: "user-page",
+  });
 };
 </script>
 <style lang="scss" scoped></style>

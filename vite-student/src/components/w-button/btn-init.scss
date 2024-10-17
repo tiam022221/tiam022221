@@ -1,0 +1,89 @@
+.w-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  font-size: 14px;
+  padding: 0px 15px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 1.5715;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+// status背景色
+$status: (
+  normal: #475569,
+  success: rgb(0, 180, 42),
+  warning: rgb(250, 125, 0),
+  danger: rgb(245, 63, 63),
+);
+//type 背景色
+$types: (
+  text: rgb(22, 93, 255),
+  dashed: #64748b,
+  outline: rgb(22, 93, 255),
+  primary: rgb(22, 93, 255),
+  secondary: #64748b,
+);
+$statusList: normal, success, warning, danger;
+$typesList: text, dashed, outline, primary, secondary;
+@function getValue($obj, $key) {
+  @if map-has-key($obj, $key) {
+    @return map-get($obj, $key);
+  }
+  @return rgb(22, 93, 255);
+}
+@for $i from 1 through length($typesList) {
+  $typeItem: nth($typesList, $i);
+  @for $j from 1 through length($statusList) {
+    $statusItem: nth($statusList, $j);
+    .w-btn-#{$typeItem}-#{$statusItem} {
+      &:hover {
+        opacity: 0.7;
+      }
+      &:active {
+        opacity: 1;
+      }
+      $bgColor: if(
+        $statusItem != normal,
+        getValue($status, $statusItem),
+        getValue($types, $typeItem)
+      );
+      @if $typeItem == primary {
+        color: #fff;
+        background-color: $bgColor;
+      } @else if $typeItem == outline or $typeItem == text {
+        color: $bgColor;
+        @if $typeItem == outline {
+          border-width: 1px;
+          border-style: solid;
+          border-color: if($statusItem == normal, rgb(22, 93, 255), $bgColor);
+        } @else {
+          &:hover {
+            color: rgba($bgColor, 0.6);
+          }
+          &:active {
+            color: $bgColor;
+          }
+        }
+      } @else {
+        color: if($statusItem == normal, #4b5563, $bgColor);
+        background-color: rgba($bgColor, 0.1);
+        $opacity: if($statusItem == normal, 1, 0.3);
+        @if $typeItem == dashed {
+          border-width: 1px;
+          border-style: dashed;
+          border-color: rgba($bgColor, 0.3);
+        }
+      }
+    }
+  }
+}

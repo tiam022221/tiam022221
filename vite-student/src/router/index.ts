@@ -6,7 +6,7 @@ const routes = [
     redirect: "/index",
   },
   {
-    path: "/",
+    path: "/main",
     name: "main-page",
     component: () => import("@/views/main/main.vue"),
     meta: [
